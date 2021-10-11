@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-card-group deck>
+        <b-card-group columns>
             <b-card
                 v-for="giph in giphs"
                 :key = "giph.id"
@@ -8,7 +8,7 @@
                 :img-alt="giph.title"
             >
                 <b-card-text>
-                    <a :href="giph.url">target="blank">{{giph.title}}</a>
+                    <a :href="giph.url" target="blank">{{giph.title}}</a>
                 </b-card-text>   
             </b-card>    
         </b-card-group>   
@@ -40,5 +40,36 @@
     }
 </script>
 <style>
+    .card {
+        margin-bottom: 2rem;
+    }
+    @media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+@media (min-width: 48em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+@media (min-width: 62em) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
+@media (min-width: 75em) {
+    .card-columns {
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+    }
+}  
 
 </style>
